@@ -72,14 +72,15 @@ export default function App() {
         }}
       />
       {
-        strArr.map((el, ind) =>(  
+        filtered.map((el, ind) =>(  
           <View style={{
             backgroundColor: '#6096B4',
             width: '80%',
             marginVertical: 10,
             padding: 10,
             borderRadius: 10
-          }}>
+          }}
+          key = {ind}>
             <Text style={{
               color: 'white'
             }}>
