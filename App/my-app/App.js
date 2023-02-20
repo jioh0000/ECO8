@@ -9,6 +9,7 @@ import Home from './pages/Home'
 import Settings from './pages/Settings'
 import Login from './pages/Login'
 import SignUp from './pages/SignUp'
+import BottomSheetPage from './pages/BottomSheet';
 
 const Stack = createStackNavigator()
 
@@ -18,7 +19,7 @@ export default function App() {
 
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName='Login'>
+      <Stack.Navigator initialRouteName='BottomSheetPage'>
       <Stack.Screen
           name = "Login"
           component={Login}
@@ -37,6 +38,10 @@ export default function App() {
         <Stack.Screen
           name = "SignUp"
           component = {SignUp}
+        />
+        <Stack.Screen
+          name = "BottomSheetPage"
+          component = {BottomSheetPage}
         />
       </Stack.Navigator>
     </NavigationContainer>
