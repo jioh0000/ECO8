@@ -10,6 +10,7 @@ import Settings from './pages/Settings'
 import Login from './pages/Login'
 import SignUp from './pages/SignUp'
 import BottomSheetPage from './pages/BottomSheet';
+import Map from './pages/Map'
 
 const Stack = createStackNavigator()
 
@@ -19,7 +20,7 @@ export default function App() {
 
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName='BottomSheetPage'>
+      <Stack.Navigator initialRouteName='Map'>
       <Stack.Screen
           name = "Login"
           component={Login}
@@ -30,10 +31,16 @@ export default function App() {
         <Stack.Screen
           name = "Home"
           component = {Home}
+          options = {{
+            headerShown: false
+          }}
         />
         <Stack.Screen
           name = "Settings"
           component = {Settings}
+          options = {{
+            headerShown: false
+          }}
         />
         <Stack.Screen
           name = "SignUp"
@@ -42,6 +49,16 @@ export default function App() {
         <Stack.Screen
           name = "BottomSheetPage"
           component = {BottomSheetPage}
+          options = {{
+            headerShown: false
+          }}
+        />
+        <Stack.Screen
+          name = "Map"
+          component = {Map}
+          options = {{
+            headerShown: false
+          }}
         />
       </Stack.Navigator>
     </NavigationContainer>
