@@ -12,6 +12,7 @@ import SignUp from './pages/SignUp'
 import BottomSheetPage from './pages/BottomSheet';
 import Map from './pages/Map'
 import Requests from './pages/Requests'
+import Prac from './pages/Prac'
 
 const Stack = createStackNavigator()
 
@@ -21,7 +22,7 @@ export default function App() {
 
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName='Requests'>
+      <Stack.Navigator initialRouteName='Prac'>
       <Stack.Screen
           name = "Login"
           component={Login}
@@ -64,6 +65,13 @@ export default function App() {
         <Stack.Screen
           name = "Requests"
           component = {Requests}
+          options = {{
+            headerShown: false
+          }}
+        />
+        <Stack.Screen
+          name = "Prac"
+          component = {Prac}
           options = {{
             headerShown: false
           }}
