@@ -42,6 +42,9 @@ export default function Longin(props) {
                     padding: 15,
                     borderRadius: 15
                 }}
+                onPress = {() => {
+                    props.navigation.navigate("MainStackScreen")
+                }}
             >
                 <Text style={{
                     fontSize: 15,
