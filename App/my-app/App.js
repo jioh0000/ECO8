@@ -13,6 +13,8 @@ import BottomSheetPage from './pages/BottomSheet';
 import Map from './pages/Map'
 import Requests from './pages/Requests'
 import Prac from './pages/Prac'
+import Lists from './pages/Lists';
+import MainStackScreen from './pages/MainStackScreen';
 
 const Stack = createStackNavigator()
 
@@ -22,8 +24,8 @@ export default function App() {
 
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName='Prac'>
-      <Stack.Screen
+      <Stack.Navigator initialRouteName='Lists'>
+        <Stack.Screen
           name = "Login"
           component={Login}
           options = {{
@@ -31,51 +33,27 @@ export default function App() {
           }}
         />
         <Stack.Screen
-          name = "Home"
-          component = {Home}
-          options = {{
-            headerShown: false
-          }}
-        />
-        <Stack.Screen
-          name = "Settings"
-          component = {Settings}
-          options = {{
-            headerShown: false
-          }}
-        />
-        <Stack.Screen
           name = "SignUp"
           component = {SignUp}
-        />
-        <Stack.Screen
-          name = "BottomSheetPage"
-          component = {BottomSheetPage}
           options = {{
             headerShown: false
           }}
         />
         <Stack.Screen
-          name = "Map"
-          component = {Map}
+          name = "Lists"
+          component = {Lists}
           options = {{
             headerShown: false
           }}
         />
         <Stack.Screen
-          name = "Requests"
-          component = {Requests}
+          name = "MainStackScreen"
+          component = {MainStackScreen}
           options = {{
             headerShown: false
           }}
         />
-        <Stack.Screen
-          name = "Prac"
-          component = {Prac}
-          options = {{
-            headerShown: false
-          }}
-        />
+        
       </Stack.Navigator>
     </NavigationContainer>
   );
