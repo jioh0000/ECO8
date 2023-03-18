@@ -14,6 +14,7 @@ import Map from './pages/Map'
 import Requests from './pages/Requests'
 import Prac from './pages/Prac'
 import Lists from './pages/Lists';
+import Database from './pages/Database'
 import MainStackScreen from './pages/MainStackScreen';
 
 const Stack = createStackNavigator()
@@ -24,7 +25,7 @@ export default function App() {
 
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName='Lists'>
+      <Stack.Navigator initialRouteName='Database'>
         <Stack.Screen
           name = "Login"
           component={Login}
@@ -35,6 +36,13 @@ export default function App() {
         <Stack.Screen
           name = "SignUp"
           component = {SignUp}
+          options = {{
+            headerShown: false
+          }}
+        />
+        <Stack.Screen
+          name = "Database"
+          component={Database}
           options = {{
             headerShown: false
           }}
